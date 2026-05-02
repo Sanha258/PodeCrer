@@ -1,0 +1,616 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-05-02T19:00:00Z",
+  "__export_source": "insomnia.desktop.app",
+  "resources": [
+    {
+      "_id": "env_dev",
+      "parentId": "wrk_podcrer",
+      "modified": 0,
+      "created": 0,
+      "name": "Desenvolvimento",
+      "data": {
+        "base_url": "http://localhost:3000",
+        "trilha_id": "",
+        "aluno_1_id": "",
+        "aluno_2_id": "",
+        "aluno_3_id": "",
+        "atividade_1_id": "",
+        "atividade_2_id": "",
+        "atividade_3_id": ""
+      },
+      "dataPropertyOrder": {
+        "&": ["base_url", "trilha_id", "aluno_1_id", "aluno_2_id", "aluno_3_id", "atividade_1_id", "atividade_2_id", "atividade_3_id"]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 0
+    },
+    {
+      "_id": "fld_trilhas",
+      "parentId": "wrk_podcrer",
+      "modified": 0,
+      "created": 0,
+      "name": "📚 TRILHAS",
+      "description": "Endpoints para gerenciar trilhas de aprendizagem",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 100
+    },
+    {
+      "_id": "req_criar_trilha",
+      "parentId": "fld_trilhas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/trilhas",
+      "name": "1️⃣ Criar Trilha",
+      "description": "Cria uma nova trilha de aprendizagem",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Pensamento Computacional - Turma A\",\n  \"professorId\": \"professor_joao_123\",\n  \"descricao\": \"Trilha focada em lógica de programação, algoritmos e resolução de problemas.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 110
+    },
+    {
+      "_id": "req_listar_trilhas",
+      "parentId": "fld_trilhas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/trilhas",
+      "name": "2️⃣ Listar Trilhas",
+      "description": "Lista todas as trilhas cadastradas",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 120
+    },
+    {
+      "_id": "req_buscar_trilha",
+      "parentId": "fld_trilhas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/trilhas/{{ trilha_id }}",
+      "name": "3️⃣ Buscar Trilha por ID",
+      "description": "Busca uma trilha específica pelo ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 130
+    },
+    {
+      "_id": "req_atualizar_trilha",
+      "parentId": "fld_trilhas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/trilhas/{{ trilha_id }}",
+      "name": "4️⃣ Atualizar Trilha",
+      "description": "Atualiza os dados de uma trilha",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Pensamento Computacional - Turma A (Atualizado)\",\n  \"descricao\": \"Trilha atualizada com novos conteúdos\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 140
+    },
+    {
+      "_id": "req_deletar_trilha",
+      "parentId": "fld_trilhas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/trilhas/{{ trilha_id }}",
+      "name": "5️⃣ Deletar Trilha",
+      "description": "Remove uma trilha (soft delete)",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 150
+    },
+    {
+      "_id": "fld_alunos",
+      "parentId": "wrk_podcrer",
+      "modified": 0,
+      "created": 0,
+      "name": "👨‍🎓 ALUNOS",
+      "description": "Endpoints para gerenciar alunos",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 200
+    },
+    {
+      "_id": "req_criar_aluno_1",
+      "parentId": "fld_alunos",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/alunos",
+      "name": "1️⃣ Criar Aluno 1",
+      "description": "Cadastra o primeiro aluno na trilha",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Ana Beatriz Souza\",\n  \"email\": \"ana.souza@escola.com\",\n  \"trilhaId\": \"{{ trilha_id }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 210
+    },
+    {
+      "_id": "req_criar_aluno_2",
+      "parentId": "fld_alunos",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/alunos",
+      "name": "2️⃣ Criar Aluno 2",
+      "description": "Cadastra o segundo aluno na trilha",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Carlos Eduardo Lima\",\n  \"email\": \"carlos.lima@escola.com\",\n  \"trilhaId\": \"{{ trilha_id }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 220
+    },
+    {
+      "_id": "req_criar_aluno_3",
+      "parentId": "fld_alunos",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/alunos",
+      "name": "3️⃣ Criar Aluno 3",
+      "description": "Cadastra o terceiro aluno na trilha",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Mariana Fernandes Costa\",\n  \"email\": \"mariana.costa@escola.com\",\n  \"trilhaId\": \"{{ trilha_id }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 230
+    },
+    {
+      "_id": "req_listar_alunos",
+      "parentId": "fld_alunos",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/alunos/trilha/{{ trilha_id }}",
+      "name": "4️⃣ Listar Alunos da Trilha",
+      "description": "Lista todos os alunos de uma trilha",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 240
+    },
+    {
+      "_id": "req_buscar_aluno",
+      "parentId": "fld_alunos",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/alunos/{{ aluno_1_id }}",
+      "name": "5️⃣ Buscar Aluno por ID",
+      "description": "Busca um aluno específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 250
+    },
+    {
+      "_id": "fld_atividades",
+      "parentId": "wrk_podcrer",
+      "modified": 0,
+      "created": 0,
+      "name": "📝 ATIVIDADES",
+      "description": "Endpoints para gerenciar atividades",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 300
+    },
+    {
+      "_id": "req_criar_atividade_1",
+      "parentId": "fld_atividades",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/atividades",
+      "name": "1️⃣ Criar Atividade 1",
+      "description": "Cria primeira atividade da trilha",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Atividade 1: Algoritmos do Dia a Dia\",\n  \"trilhaId\": \"{{ trilha_id }}\",\n  \"descricao\": \"Identificar algoritmos em tarefas cotidianas\",\n  \"pontosMaximos\": 10,\n  \"ordem\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 310
+    },
+    {
+      "_id": "req_criar_atividade_2",
+      "parentId": "fld_atividades",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/atividades",
+      "name": "2️⃣ Criar Atividade 2",
+      "description": "Cria segunda atividade da trilha",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Atividade 2: Fluxograma do Lanche\",\n  \"trilhaId\": \"{{ trilha_id }}\",\n  \"descricao\": \"Criar fluxograma do processo de fazer um lanche\",\n  \"pontosMaximos\": 15,\n  \"ordem\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 320
+    },
+    {
+      "_id": "req_criar_atividade_3",
+      "parentId": "fld_atividades",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/atividades",
+      "name": "3️⃣ Criar Atividade 3",
+      "description": "Cria terceira atividade da trilha",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Atividade 3: Lógica com Blocos\",\n  \"trilhaId\": \"{{ trilha_id }}\",\n  \"descricao\": \"Resolver desafios com programação em blocos\",\n  \"pontosMaximos\": 20,\n  \"ordem\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 330
+    },
+    {
+      "_id": "req_listar_atividades",
+      "parentId": "fld_atividades",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/atividades/trilha/{{ trilha_id }}",
+      "name": "4️⃣ Listar Atividades da Trilha",
+      "description": "Lista todas as atividades de uma trilha",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 340
+    },
+    {
+      "_id": "fld_entregas",
+      "parentId": "wrk_podcrer",
+      "modified": 0,
+      "created": 0,
+      "name": "✅ ENTREGAS",
+      "description": "Endpoints para registrar entregas (evento principal)",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 400
+    },
+    {
+      "_id": "req_entrega_aluno1_at1",
+      "parentId": "fld_entregas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/entregas",
+      "name": "1️⃣ Ana - Atividade 1",
+      "description": "Registra entrega da Ana na atividade 1",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"trilhaId\": \"{{ trilha_id }}\",\n  \"alunoId\": \"{{ aluno_1_id }}\",\n  \"atividadeId\": \"{{ atividade_1_id }}\",\n  \"professorId\": \"professor_joao_123\",\n  \"nota\": 9.5\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 410
+    },
+    {
+      "_id": "req_entrega_aluno1_at2",
+      "parentId": "fld_entregas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/entregas",
+      "name": "2️⃣ Ana - Atividade 2",
+      "description": "Registra entrega da Ana na atividade 2",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"trilhaId\": \"{{ trilha_id }}\",\n  \"alunoId\": \"{{ aluno_1_id }}\",\n  \"atividadeId\": \"{{ atividade_2_id }}\",\n  \"professorId\": \"professor_joao_123\",\n  \"nota\": 10\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 420
+    },
+    {
+      "_id": "req_entrega_aluno2_at1",
+      "parentId": "fld_entregas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/entregas",
+      "name": "3️⃣ Carlos - Atividade 1",
+      "description": "Registra entrega do Carlos na atividade 1",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"trilhaId\": \"{{ trilha_id }}\",\n  \"alunoId\": \"{{ aluno_2_id }}\",\n  \"atividadeId\": \"{{ atividade_1_id }}\",\n  \"professorId\": \"professor_joao_123\",\n  \"nota\": 7.5\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 430
+    },
+    {
+      "_id": "req_entrega_aluno3_at1",
+      "parentId": "fld_entregas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/entregas",
+      "name": "4️⃣ Mariana - Atividade 1",
+      "description": "Registra entrega da Mariana na atividade 1",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"trilhaId\": \"{{ trilha_id }}\",\n  \"alunoId\": \"{{ aluno_3_id }}\",\n  \"atividadeId\": \"{{ atividade_1_id }}\",\n  \"professorId\": \"professor_joao_123\",\n  \"nota\": 10\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 440
+    },
+    {
+      "_id": "req_entrega_aluno3_at2",
+      "parentId": "fld_entregas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/entregas",
+      "name": "5️⃣ Mariana - Atividade 2",
+      "description": "Registra entrega da Mariana na atividade 2",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"trilhaId\": \"{{ trilha_id }}\",\n  \"alunoId\": \"{{ aluno_3_id }}\",\n  \"atividadeId\": \"{{ atividade_2_id }}\",\n  \"professorId\": \"professor_joao_123\",\n  \"nota\": 9\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 450
+    },
+    {
+      "_id": "req_listar_entregas_trilha",
+      "parentId": "fld_entregas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/entregas/trilha/{{ trilha_id }}",
+      "name": "6️⃣ Listar Entregas da Trilha",
+      "description": "Lista todas as entregas da trilha",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 460
+    },
+    {
+      "_id": "req_verificar_entrega",
+      "parentId": "fld_entregas",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/entregas/verificar/{{ aluno_1_id }}/{{ atividade_1_id }}",
+      "name": "7️⃣ Verificar Entrega",
+      "description": "Verifica se aluno já entregou atividade",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 470
+    },
+    {
+      "_id": "fld_ranking",
+      "parentId": "wrk_podcrer",
+      "modified": 0,
+      "created": 0,
+      "name": "🏆 RANKING",
+      "description": "Endpoints para ranking e estatísticas",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 500
+    },
+    {
+      "_id": "req_ranking_trilha",
+      "parentId": "fld_ranking",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/ranking/trilha/{{ trilha_id }}",
+      "name": "1️⃣ Ranking da Trilha",
+      "description": "Calcula ranking completo da trilha",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 510
+    },
+    {
+      "_id": "req_posicao_aluno",
+      "parentId": "fld_ranking",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/ranking/trilha/{{ trilha_id }}/aluno/{{ aluno_1_id }}",
+      "name": "2️⃣ Posição do Aluno",
+      "description": "Busca posição específica de um aluno",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 520
+    },
+    {
+      "_id": "req_estatisticas_completas",
+      "parentId": "fld_ranking",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/estatisticas/trilha/{{ trilha_id }}",
+      "name": "3️⃣ Estatísticas Completas",
+      "description": "Todas as estatísticas da trilha",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 530
+    },
+    {
+      "_id": "req_estatisticas_resumo",
+      "parentId": "fld_ranking",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/estatisticas/trilha/{{ trilha_id }}/resumo",
+      "name": "4️⃣ Estatísticas Resumidas",
+      "description": "Apenas métricas principais",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 540
+    },
+    {
+      "_id": "fld_utils",
+      "parentId": "wrk_podcrer",
+      "modified": 0,
+      "created": 0,
+      "name": "🔧 UTILITÁRIOS",
+      "description": "Endpoints auxiliares",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 600
+    },
+    {
+      "_id": "req_health",
+      "parentId": "fld_utils",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/health",
+      "name": "Health Check",
+      "description": "Verifica se API está online",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 610
+    },
+    {
+      "_id": "req_root",
+      "parentId": "fld_utils",
+      "modified": 0,
+      "created": 0,
+      "url": "{{ base_url }}/",
+      "name": "Root",
+      "description": "Mensagem de boas-vindas",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 620
+    },
+    {
+      "_id": "wrk_podcrer",
+      "parentId": null,
+      "modified": 0,
+      "created": 0,
+      "name": "🚀 PODE CRER API",
+      "description": "API do motor pedagógico PodeCrer\n\n✅ Ranking dinâmico\n✅ Estatísticas em tempo real\n✅ Google Sheets integration\n✅ Event-driven architecture",
+      "scope": "collection",
+      "_type": "workspace"
+    }
+  ]
+}

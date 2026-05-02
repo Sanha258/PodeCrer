@@ -1,5 +1,5 @@
 // src/controllers/entrega.controller.js
-import { db } from "../../database/memory.db.js"
+import { db } from "../database/memory.db.js"
 import { Entrega } from "../models/Entrega.js";
 
 // Registrar entrega validada (EVENTO PRINCIPAL)

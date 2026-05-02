@@ -1,5 +1,5 @@
 // src/controllers/aluno.controller.js
-import { db } from "../../database/memory.db.js";
+import { db } from "../database/memory.db.js";
 import { Aluno } from "../models/Aluno.js";
 
 // Criar novo aluno (vinculado a uma trilha)

@@ -1,5 +1,5 @@
 // src/controllers/atividade.controller.js
-import { db } from "../../database/memory.db.js"
+import { db } from "../database/memory.db.js";
 import { Atividade } from "../models/Atividade.js";
 
 // Criar nova atividade dentro de uma trilha

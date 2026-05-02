@@ -1,5 +1,5 @@
 // src/controllers/trilha.controller.js
-import { db } from "../../database/memory.db.js"
+import { db } from "../database/memory.db.js"
 import { Trilha } from "../models/Trilha.js";
 
 // Criar nova trilha

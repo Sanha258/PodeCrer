@@ -1,8 +1,8 @@
 // src/services/database.js
-import { Trilha } from "../src/models/Trilha.js";
-import { Aluno } from "../src/models/Aluno.js";
-import { Atividade } from "../src/models/Atividade.js";
-import { Entrega } from "../src/models/Entrega.js";
+import { Trilha } from "../models/Trilha.js";
+import { Aluno } from "../models/Aluno.js";
+import { Atividade } from "../models/Atividade.js";
+import { Entrega } from "../models/Entrega.js";
 
 // Banco em memória (temporário para testes)
 export const db = {

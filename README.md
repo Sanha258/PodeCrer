@@ -2,7 +2,7 @@
 
 Plataforma educacional para **gestão de Trilhas de Aprendizagem**, onde professores podem:
 
-- Criar **Trilhas** (ex: *Trilha 2 — Pensamento Computacional*)
+- Criar **Trilhas** 
 - Cadastrar alunos
 - Propor atividades
 - Validar entregas
@@ -10,17 +10,6 @@ Plataforma educacional para **gestão de Trilhas de Aprendizagem**, onde profess
 - Acompanhar **estatísticas individuais e gerais**
 - Exportar relatórios em PDF e planilhas
 - Integrar totalmente com ferramentas do Google Workspace
-
----
-
-## 🧱 Arquitetura do Projeto
-
-PodeCrer/
- ├─ frontend/      → React + Vite
- ├─ backend/       → Node.js + Express
- └─ docker-compose.yml
-
-A aplicação roda 100% em containers Docker.
 
 ---
 
@@ -72,14 +61,8 @@ docker compose up --build
 Frontend:
 http://localhost:5173
 
-Backend (health check):
-http://localhost:3000/health
-
-Se aparecer:
-
-{ "status": "API running ✅" }
-
-Está funcionando corretamente.
+Backend:
+http://localhost:3000
 
 ---
 
@@ -111,36 +94,6 @@ npm run dev
 
 ---
 
-## 📂 Estrutura do Projeto
-
-frontend/
- ├─ src/
- │   ├─ pages/
- │   ├─ components/
- │   ├─ services/
- │   └─ App.jsx
-
-backend/
- ├─ src/
- │   ├─ controllers/
- │   ├─ routes/
- │   ├─ services/
- │   ├─ middlewares/
- │   └─ app.js
- └─ server.js
-
----
-
-## 🔗 Comunicação Frontend ↔ Backend
-
-Dentro do Docker:
-http://backend:3000
-
-Fora do Docker:
-http://localhost:3000
-
----
-
 ## 🔐 Variáveis de ambiente (backend/.env)
 
 PORT=3000
@@ -157,16 +110,4 @@ Professores que desejam acompanhar o desempenho dos alunos por trilhas de aprend
 
 🚧 Em desenvolvimento — arquitetura base pronta.
 
----
 
-## 🤝 Contribuição
-
-1. Criar uma branch
-2. Commitar
-3. Abrir Pull Request
-
----
-
-## 📄 Licença
-
-MIT

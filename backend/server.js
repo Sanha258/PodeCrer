@@ -8,6 +8,7 @@ import atividadeRoutes from "./src/routes/atividade.routes.js";
 import entregaRoutes from "./src/routes/entrega.routes.js";
 import rankingRoutes from "./src/routes/ranking.routes.js";
 import estatisticasRoutes from "./src/routes/estatisticas.routes.js";
+import authRoutes from './src/routes/auth.routes.js';
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use("/atividades", atividadeRoutes);
 app.use("/entregas", entregaRoutes);
 app.use("/api/ranking", rankingRoutes);
 app.use("/api/estatisticas", estatisticasRoutes);
+app.use('/auth', authRoutes);
 
 app.get("/", (req, res) => {
   res.send("API PodeCrer rodando 🚀");
@@ -39,5 +41,7 @@ app.listen(PORT, () => {
   console.log(`📍 Trilhas: http://localhost:${PORT}/atividades`);
   console.log(`📍 Trilhas: http://localhost:${PORT}/entregas`);
   console.log(`📍 Trilhas: http://localhost:${PORT}/ranking`);
+  console.log(`📍 Ranking: http://localhost:${PORT}/ranking/trilha/{id}`);
+  console.log(`📍 Estatísticas: http://localhost:${PORT}/estatisticas/trilha/{id}`);
   console.log(`📍 Trilhas: http://localhost:${PORT}/estatisticas`);
 });

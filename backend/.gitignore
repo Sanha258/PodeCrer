@@ -1,0 +1,19 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Credenciais (NUNCA COMMITAR!)
+credentials.json
+token.json
+
+# Configurações
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Docker
+.docker/
+EOF
